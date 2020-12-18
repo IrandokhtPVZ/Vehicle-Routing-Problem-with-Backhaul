@@ -12,3 +12,11 @@ In this repository you will find the following folders:
 4. "Lansing transportation network" constitutes of three randomly generated datasets with 100, 250, and 500 customers/nodes as well as python code related to the Lagrangian relaxation algorithm with cluster-first, route-second layout (see Section 5.3 and Appendix B).
 5. "GJ_Solution" presents our computational results as well as results reported by exact algorithms in the extant literature for GJ dataset.
 6. "TV_Solution" presents our computational results as well as results reported by exact algorithms in the extant literature for TV dataset.
+
+
+References
+Goetschalckx, M. and Jacobs-Blecha, C., 1989. The vehicle routing problem with backhauls. European Journal of Operational Research, 42(1), pp.39-51.
+Toth, P., Vigo, D., 1997. An exact algorithm for the vehicle routing problem with backhauls. Transportation Science. 31(4), 372-385.
+
+Cite our paper as:
+Parviziomran, I., Mahmoudi, M., 2020. A mixed-integer programming model for the standard vehicle routing problem with backhauls.
