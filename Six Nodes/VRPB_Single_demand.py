@@ -112,6 +112,7 @@ k = 2
 V = [0, 1, 2, 3, 4, 5]
 A = [(i,j) for i in V for j in V]
 c = {(i,j): round(np.sqrt((loc_x[j]-loc_x[i])**2 + (loc_y[j]-loc_y[i])**2),2) for i,j in A}
+c[0,0] = float('inf')
 
 # all nodes and links related to linehaul customers
 L = [1, 2, 3]
@@ -138,4 +139,4 @@ CPU_running_time = round(stop - start,2)
 print ('The solution for VRPB with single demand for small-scale dataset is:',
        '\nObjective value = ', obj_opt, '\nCPU running time in second = ', CPU_running_time)
 
-
+print('\n the route sequence is', '\nlinehau = ', x_opt, '\nconnection = ', z_opt, '\nbaclhaul = ', y_opt )

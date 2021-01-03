@@ -138,4 +138,5 @@ CPU_running_time = round(stop - start,2)
 print ('The solution for VRPB with simultaneous demand for small-scale dataset is:',
        '\nObjective value = ', obj_opt, '\nCPU running time in second = ', CPU_running_time)
 
+print('\n the route sequence is', '\nlinehau = ', x_opt, '\nconnection = ', z_opt, '\nbaclhaul = ', y_opt )
 

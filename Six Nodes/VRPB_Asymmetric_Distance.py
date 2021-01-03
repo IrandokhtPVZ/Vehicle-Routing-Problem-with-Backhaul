@@ -106,12 +106,12 @@ k = 2
 # all nodes, where 0 states the depot. all links and symetric distance matrix
 V = [0, 1, 2, 3, 4, 5]
 A = [(i,j) for i in V for j in V]
-c = {(0,0):0,   (0,1):2,    (0,2):4,    (0,3):7,   (0,4):1.5,   (0,5):2.5,
-     (1,0):3,   (1,1):0,    (1,2):2,    (1,3):4,   (1,4):2.5,   (1,5):1.5,
-     (2,0):5,   (2,1):3,    (2,2):0,    (2,3):5,   (2,4):3,     (2,5):1.5,
-     (3,0):3,   (3,1):5,    (3,2):2,    (3,3):0,   (3,4):3,     (3,5):1.5,
-     (4,0):2.5, (4,1):1.5,  (4,2):4,    (4,3):2.5, (4,4):0,     (4,5):1,
-     (5,0):3,   (5,1):2.5,  (5,2):2.5,  (5,3):3,   (5,4):1.5,   (5,5):0}
+c = {(0,0):float('inf'),   (0,1):2,               (0,2):2.83,            (0,3):2,              (0,4):1.12,           (0,5):1.80,
+     (1,0):1,              (1,1):float('inf'),    (1,2):2,               (1,3):2.83,           (1,4):1.12,           (1,5):1.80,
+     (2,0):1,              (2,1):5,               (2,2):float('inf'),    (2,3):2,              (2,4):1.80,           (2,5):1.12,
+     (3,0):2,              (3,1):1,               (3,2):5,               (3,3):float('inf'),   (3,4):1.80,           (3,5):1.12,
+     (4,0):1,              (4,1):1.12,            (4,2):1.80,            (4,3):1.80,           (4,4):float('inf'),   (4,5):1,
+     (5,0):5,              (5,1):1.80,            (5,2):1.12,            (5,3):1.12,           (5,4):1,              (5,5):float('inf')}
 
 # all nodes and links related to linehaul customers
 L = [1, 2, 3]
@@ -138,4 +138,5 @@ CPU_running_time = round(stop - start,2)
 print ('The solution for VRPB with asymmetric distance for small-scale dataset is:',
        '\nObjective value = ', obj_opt, '\nCPU running time in second = ', CPU_running_time)
 
+print('\n the route sequence is', '\nlinehau = ', x_opt, '\nconnection = ', z_opt, '\nbaclhaul = ', y_opt )
 
